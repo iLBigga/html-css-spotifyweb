@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
-    --text-grey: #717171;
+    --grey: #717171;
+    --pading-sidebar: 0.75rem 1.25rem;
 }
 
 * {
@@ -19,6 +20,10 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+}
+
+ol , ul, menu {
+    list-style: none;
 }
 
 a {
@@ -54,21 +59,123 @@ img {
 
 .footer-toolbar {
     background-color: #282828;
-    flex-basis: ;
     display: flex;
 }
 
 
 
+/* SIDEBAR */
 
 
 
+.sidebar-logo,
+.sidebar-playlist,
+.sidebar-profile {
+    font-size: 1.12rem;
+    padding: var(--pading-sidebar);
+}
+
+.sidebar a:hover {
+    color: white;
+}
+
+/* SIDEBAR: Menu */
+
+.sidebar-menu {
+    color: var(--grey);
+    font-size: 1.12rem;
+}
+
+.sidebar-menu li {
+    padding: 0.25rem 1.25rem;
+}
+
+.sidebar-menu li {
+    position: relative;
+}
+
+
+.green-mark {
+    display: none;
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    border-radius: 10px;
+    left: 0;
+    top: 0;
+    background-color: greenyellow;
+    
+}
+
+.sidebar-menu li:hover .green-mark {
+    display: block;
+}
+
+/* SIDEBAR : Playlist */
+
+.sidebar-playlist h2 {
+    font-size: 1rem;
+}
+
+.sidebar-playlist li {
+    color: var(--grey);
+    padding: 0.60rem 0;
+}
+
+.sidebar-profile {
+    margin-top: auto;
+}
+
+.add-playlist {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.add-playlist-box {
+    width: 38px;
+    height: 38px;
+    background-color: var(--grey);
+    color: black;
+    font-size: 38px;  
+    line-height: 19px;
+    vertical-align: middle; 
+    text-align: center;
+}
+
+/* SIDEBAR : Profile */
+
+.sidebar-profile .download-app {
+    color: var(--grey);
+}
+
+.download-app-text {
+    padding-left: 10px;
+}
+
+.sidebar-profile hr {
+    margin: 0.75rem 0;
+}
+
+.profile-info {
+    display: flex;
+    gap: 10px;
+}
+
+.profile-icon {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--grey);
+    display: inline-block;
+    background-image: url(../img/profile.svg);
+    background-size: cover;
+}
 
 
 
+/* TOOLBAR*/
 
-
-/* ASIDE TOOLBAR*/
 
 
 .main-toolbar {
@@ -89,12 +196,7 @@ img {
     justify-content: center;
 }
 
-
-
-/* TOOLBAR SONG */
-
-
-
+/* TOOLBAR : Song-title*/
 
 .toolbar-i {
     width: 100%;
@@ -133,20 +235,20 @@ img {
 }
 
 .song-author {
-    color: var(--text-grey);
+    color: var(--grey);
 }
 
 .song-action a{
     padding: 5px;
     font-size: 1.25rem;
-    color: var(--text-grey);
+    color: var(--grey);
 }
 
 .song-action a:hover {
     color: white;
 }
 
-/* PlAYER */
+/* TOOLBAR : Player */
 
 .toolbar-item.large {
     flex-basis: 50%;
@@ -170,7 +272,7 @@ img {
 }
 
 .toolbar-item .player-input a:hover {
-    color: var(--text-grey);
+    color: var(--grey);
 }
 
 .progression-bar {
@@ -181,7 +283,7 @@ img {
 
 .bar {
     width: 100%;
-    background-color: var(--text-grey);
+    background-color: var(--grey);
     display: inline-block;
     margin: 0 1rem;
     height: 5px;
@@ -195,13 +297,7 @@ img {
     display: block;
 }
 
-.bar-inside:hover::after {
-    content: ' \229B';
-}
-
-
-/* VOLUME */
-
+/* TOOLBAR : Volume */
 
 .toolbar-item .song-volume {
     display: flex;
@@ -211,8 +307,4 @@ img {
 .toolbar-item .song-volume a {
     padding: 0 1rem;
 }
-
-.toolbar-item .song-volume a:hover {
-    color: var(--text-grey);
-} 
 
