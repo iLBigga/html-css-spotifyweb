@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main-body {
+    display: flex;
+    flex-grow: 1;
+}
+
+.main-header {
+    flex-basis: calc(100% / 6);
+    height: 100%;
+    background-color: black;
+}
+
+.main-site {
+    flex-grow: 1;
+    background-color: #141922;
+}
+
+menu {
+    background-color: #282828;
+    height: 80px;
+}
