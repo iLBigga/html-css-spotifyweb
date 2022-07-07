@@ -12,6 +12,7 @@
 
 html {
     font-family: 'PT Sans', sans-serif;
+    color: white;
 }
 
 body {
@@ -33,22 +34,37 @@ img {
 .main-body {
     display: flex;
     flex-grow: 1;
+    overflow: hidden;
 }
 
-.main-header {
+.sidebar {
+    flex-shrink: 0;
     flex-basis: 300px;
     height: 100%;
     background-color: black;
+    display: flex;
+    flex-direction: column;
 }
 
-.main-site {
+.main-content{
     flex-grow: 1;
     background-color: #141922;
+    overflow: auto;
 }
 
 .footer-toolbar {
     background-color: #282828;
+    flex-basis: ;
+    display: flex;
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -62,16 +78,17 @@ img {
 .toolbar-col {
     display: flex;
     flex-basis: 300px;
-    background-color: red;
+    align-items: center;
     
 }
 
 .toolbar-col.large {
     display: flex;
+    flex-basis: 0;
     flex-grow: 1;
-    background-color: blue;
-    
+    justify-content: center;
 }
+
 
 
 /* TOOLBAR SONG */
@@ -91,38 +108,111 @@ img {
 
 .toolbar-item {
     padding: 10px;
+    width: 100%;
 }
 
-.main-toolbar  .song-action{
+.song-action{
     align-items: center;
 }
 
-.main-toolbar .song-img  {
+.song-img  {
     width: 60px;
     height: 60px;
 }
 
-.main-toolbar .song-title,
-.main-toolbar .song-action {
+.song-title,
+.song-action {
     display: flex;
     align-items: center;
-
+    justify-content: space-between;
 }
 
-.main-toolbar .song-title span{
-    padding: 0 5px;
+.song-title span{
+    padding: 0 1rem;
     display: block;
 }
 
-.main-toolbar .song-author {
+.song-author {
     color: var(--text-grey);
 }
 
-.main-toolbar .song-action i{
+.song-action a{
     padding: 5px;
+    font-size: 1.25rem;
+    color: var(--text-grey);
 }
 
-.main-toolbar .song-action a:hover {
-    transition: 1s;
+.song-action a:hover {
     color: white;
 }
+
+/* PlAYER */
+
+.toolbar-item.large {
+    flex-basis: 50%;
+}
+
+.toolbar-item .song-player {
+    flex-basis: calc(100% / 2);
+}
+
+.toolbar-item .player-input {
+    text-align: center;
+    padding-bottom: 10px;
+    min-width: 205px;
+}
+
+.toolbar-item .player-input a {
+    padding: 0 10px;
+    font-size: 1.25rem;
+    color: white;
+
+}
+
+.toolbar-item .player-input a:hover {
+    color: var(--text-grey);
+}
+
+.progression-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar {
+    width: 100%;
+    background-color: var(--text-grey);
+    display: inline-block;
+    margin: 0 1rem;
+    height: 5px;
+    border-radius: 20px;
+}
+
+.bar-inside {
+    background-color: white;
+    width: 50%;
+    height: 100%;
+    display: block;
+}
+
+.bar-inside:hover::after {
+    content: ' \229B';
+}
+
+
+/* VOLUME */
+
+
+.toolbar-item .song-volume {
+    display: flex;
+    align-items: center;
+}
+
+.toolbar-item .song-volume a {
+    padding: 0 1rem;
+}
+
+.toolbar-item .song-volume a:hover {
+    color: var(--text-grey);
+} 
+
