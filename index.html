@@ -20,15 +20,17 @@
 
         <header class="sidebar">
             <div class="sidebar-logo">
-                <h1><i class="fa-brands fa-spotify"></i> Spotify</h1></div>
+                <img class="logo-big" src="./img/logo.svg" alt="">
+                <img class="logo-small" src="./img/logo-small.svg" alt="">
+            </div>
 
             <!-- SIDEBAR : Menu -->
 
             <div class="sidebar-menu">
                 <ul>
-                    <li><a href="#"><i class="fa-solid fa-house"></i> Home</a><div class="green-mark"></div></li>
-                    <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i> Cerca</a><div class="green-mark"></div></li>
-                    <li><a href="#"><i class="fa-solid fa-bars"></i> La tua libreria</a><div class="green-mark"></div></li>
+                    <li><a href="#"><i class="fa-solid fa-house"></i><span class="mobile-view"> Home</span><div class="green-mark"></div></a></li>
+                    <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i><span class="mobile-view"> Cerca</span><div class="green-mark"></div></a></li>
+                    <li><a href="#"><i class="fa-solid fa-bars"></i><span class="mobile-view"> La tua libreria</span><div class="green-mark"></div></a></li>
                 </ul>
             </div>
 
@@ -39,9 +41,9 @@
                     <ul>
                         <li class="add-playlist">
                             <a class="add-playlist-box" href="#">
-                                <i class="fa-regular fa-plus"></i>
+                                <i class="fa-solid fa-square-plus"></i>
+                                <span class="add-playlist-text">Crea Playlist</span>
                             </a>
-                            <a href="#"> Crea Playlist</a>
                         </li>
                         <li><a href="#">Nome Playlist</a></li>
                         <li><a href="#">Nome Playlist</a></li>
@@ -58,19 +60,148 @@
             <div class="sidebar-profile">
                 <div class="download-app">
                     <i class="fa-regular fa-circle-down"></i>
-                    <a class="download-app-text">Installa app</a> 
+                    <a class="download-app-text"><span class="mobile-view">Installa app</span></a> 
                 </div>
-                <hr>
                 <div class="profile-info">
                     <figure class="profile-icon"></figure>
-                    <span class="profile-name"><b>John Doe</b></span>
+                    <span class="profile-name mobile-view"><b>John Doe</b></span>
                 </div>
             </div>
         </header>
 
         <!-- MAIN CONTENT -->
 
-        <main class="main-content"></main></main>
+        <main class="main-content">
+
+            <!-- Upgrade -->
+
+            <div class="upgrade">
+                <a class="button" href="#">effettua l'upgrade</a>
+            </div>
+
+            <!-- Main Navbar -->
+
+            <div class="main-content-nav">
+                <ul>
+                    <li><a href="#">in evidenza<div class="green-mark-bottom"></div></a></li>
+                    <li><a href="#">podcast<div class="green-mark-bottom"></div></a></li>
+                    <li><a href="#">classifiche<div class="green-mark-bottom"></div></a></li>
+                    <li><a href="#">generi e mood<div class="green-mark-bottom"></div></a></li>
+                    <li><a href="#">nuove uscite<div class="green-mark-bottom"></div></a></li>
+                    <li><a href="#">scopri<div class="green-mark-bottom"></div></a></li>
+                </ul>
+            </div>
+
+            <!-- Recently played -->
+
+            <section class="section-card">
+                <div class="section-title">
+                    <h1>Recently played</h1>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <figure class="card-img"><img src="./img/metal_lifting.jpg" alt=""></figure>
+                            <p class="card-name">Heavy Metal</p>
+                            <p class="card-subtitle">Subtitle</p>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card">
+                            <figure class="card-img"><img src="./img/stranger.jpeg" alt=""></figure>
+                            <p class="card-name">Stranger Things, Vol.1 (a Netflix Original Series Soundtrack)</p>
+                            <p class="card-subtitle">Kyle Dixon & Michael Stein</p>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card">
+                            <figure class="card-img"><img src="./img/aquietplace.jpeg" alt=""></figure>
+                            <p class="card-name">A quiet place</p>
+                            <p class="card-subtitle">Subtitle</p>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card">
+                            <figure class="card-img"><img src="./img/split.jpeg" alt=""></figure>
+                            <p class="card-name">Split</p>
+                            <p class="card-subtitle">Subtitle</p>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card">
+                            <figure class="card-img"><img src="./img/cure.jpeg" alt=""></figure>
+                            <p class="card-name">A cure of wellness</p>
+                            <p class="card-subtitle">Subtitle</p>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card">
+                            <figure class="card-img"><img src="./img/sinister.jpeg" alt=""></figure>
+                            <p class="card-name">Sinister</p>
+                            <p class="card-subtitle">Subtitle</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+
+            <!-- For John Doe -->
+
+            <section class="section-card">
+                <div class="section-title">
+                    <h1>Creato per john Doe</h1>
+                    <p class="section-subtitle">Più ascolti, più accurati saranno i suggerimentil.</p>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <figure class="card-img"><img src="./img/radar.jpeg" alt=""></figure>
+                            <p class="card-name">Release Radar</p>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card">
+                            <figure class="card-img"><img src="./img/mixdaily.jpeg" alt=""></figure>
+                            <p class="card-name">Daily Mix 1</p>
+                        </div>
+                    </div> 
+                </div>
+            </section>
+
+            <!-- Most popular -->
+
+            <section class="section-card">
+                <div class="section-title">
+                    <h1>Recently played</h1>
+                    <p class="section-subtitle">Più ascolti, più accurati saranno i suggerimentil.</p>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <figure class="card-img-circle"><img src="./img/youg.jpeg" alt=""></figure>
+                            <p class="card-name">Lana del Rey</p>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card">
+                            <figure class="card-img-circle"><img src="./img/einaudi.jpeg" alt=""></figure>
+                            <p class="card-name">Ludovico Einaudi</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
 
 
@@ -81,7 +212,7 @@
 
     <aside class="footer-toolbar">
 
-            <!-- TOOLBAR : Song-title -->
+            <!-- TOOLBAR : Title -->
 
             <div class="toolbar-col">
                 <div class="toolbar-item song">
@@ -107,13 +238,13 @@
                         <div class="player-input">
                             <a href=""><i class="fa-solid fa-shuffle"></i></a>
                             <a href=""><i class="fa-solid fa-backward-step"></i></a>
-                            <a href=""><i class="fa-solid fa-play"></i></a>
+                            <a href=""><i class="fa-solid fa-circle-play big"></i></a>
                             <a href=""><i class="fa-solid fa-forward-step"></i></a>
                             <a href=""><i class="fa-solid fa-arrow-rotate-right"></i></a>
                         </div>
                         <div class="progression-bar">
                             <span>0:25</span>
-                            <span class="bar"><span class="bar-inside"></span></span>
+                            <span class="bar"><span class="bar-inside"><span class="circle-progress"></span></span></span>
                             <span>4:35</span>
                         </div>
                     </div>
@@ -128,7 +259,7 @@
                         <a href="#"><i class="fa-solid fa-bars"></i></a>
                         <a href="#"><i class="fa-solid fa-desktop"></i></a>
                         <a href="#"><i class="fa-solid fa-volume-high"></i></a>
-                        <span class="bar"><span class="bar-inside"></span></span>
+                        <span class="bar"><span class="bar-inside"><span class="circle-progress"></span></span></span>
                     </div>
                 </div>
             </div>
